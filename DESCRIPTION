@@ -1,0 +1,32 @@
+Package: machador
+Title: Obras completas de Machado de Assis para análise de texto
+Version: 0.1.0
+Authors@R: 
+    person("Guilherme", "Ferreira", , "guilhermeferreirajf@gmail.com", role = c("aut", "cre"))
+Description: Dataset completo das obras de Machado de Assis (1839-1908), 
+    incluindo romances, contos, poesias, crônicas, teatro, crítica, traduções 
+    e miscelânea. Os textos foram extraídos da edição do MEC 
+    (https://machado.mec.gov.br/) e estão formatados para análise de texto 
+    com tidytext. Permite filtrar por gênero ou título, facilitando 
+    estudos literários computacionais e análise textual.
+License: MIT + file LICENSE
+URL: https://github.com/guiajf/machador
+BugReports: https://github.com/guiajf/machador/issues
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    dplyr,
+    stringr,
+    tibble,
+    tidytext
+Suggests:
+    ggplot2,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0
