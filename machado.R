@@ -24,10 +24,10 @@ pkgdown::build_site()
 usethis::use_pkgdown_github_pages()
 
 
-# Adicionar os novos arquivos ao Git
+# 1. Primeiro, verificar o status
 usethis::use_git()
 
-# Escolha a opção 1 (I agree) para commitar todos os arquivos
+# Quando perguntar, escolha "1: I agree" para commitar as mudanças
 
-# Enviar para o GitHub
-usethis::use_github()
+# 2. Depois, fazer push manualmente
+system("git push origin main")
