@@ -10,7 +10,7 @@ Description: Dataset completo das obras de Machado de Assis (1839-1908),
     com tidytext. Permite filtrar por gênero ou título, facilitando 
     estudos literários computacionais e análise textual.
 License: MIT + file LICENSE
-URL: https://github.com/guiajf/machador
+URL: https://github.com/guiajf/machador, https://guiajf.github.io/machador/
 BugReports: https://github.com/guiajf/machador/issues
 Depends: 
     R (>= 4.0.0)
