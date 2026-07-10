@@ -1,9 +1,11 @@
-<!-- badges: start -->
-  [![R-CMD-check](https://github.com/guiajf/machador/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/guiajf/machador/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
-
-
 # machador
+
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![R-CMD-check](https://github.com/seu-usuario/machador/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seu-usuario/machador/actions/workflows/R-CMD-check.yaml)
+
+Obras completas de Machado de Assis para análise de texto em R.
+
 
 Obras completas de Machado de Assis para análise de texto em R.
 
