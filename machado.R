@@ -24,10 +24,9 @@ pkgdown::build_site()
 usethis::use_pkgdown_github_pages()
 
 
-# 1. Primeiro, verificar o status
+# 1. Commitar as mudanças
 usethis::use_git()
+# Escolha "1: I agree"
 
-# Quando perguntar, escolha "1: I agree" para commitar as mudanças
-
-# 2. Depois, fazer push manualmente
-system("git push origin main")
+# 2. Fazer push (não use use_github, use git_push)
+usethis::git_push()
