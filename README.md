@@ -4,8 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![R-CMD-check](https://github.com/seu-usuario/machador/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seu-usuario/machador/actions/workflows/R-CMD-check.yaml)
 
-Obras completas de Machado de Assis para análise de texto em R.
-
 
 Obras completas de Machado de Assis para análise de texto em R.
 
