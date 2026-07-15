@@ -1,32 +1,69 @@
 library(dplyr)
 
+# Referências:
+# https://datavizsp25.classes.andrewheiss.com/example/14-example.html
+
 listar_obras()
 listar_obras() %>% filter(titulo == "Junqueira Freire")
 
-# Instalar gitcreds se não tiver
-#install.packages("gitcreds")
+install.packages("remotes")
+remotes::install_github("guiajf/machador")
 
-# Guardar o token
-gitcreds::gitcreds_set()
-# Cole o token quando pedir
+library(tokenizers)
+library(tidyverse)
+library(tidytext)
+library(machador)
+library(machador)
+library(tidytext)
+library(ggplot2)
 
-# Agora tente novamente
-usethis::use_github()
+library(machador)
+library(dplyr)
 
-usethis::use_pkgdown()
+# Extrair o texto de uma obra específica (ex: Dom Casmurro)
+dom_casmurro <- obras_textos %>%
+  filter(titulo == "Dom Casmurro") %>%
+  pull(texto) %>%
+  strsplit("\n") %>%  # Dividir em linhas
+  unlist()
 
-usethis::use_github_action("check-standard")
+head(dom_casmurro, 9)
 
-# Gerar o site localmente
-pkgdown::build_site()
+memorias_postumas <- obras_textos %>%
+  filter(titulo == "Memórias Póstumas de Brás Cubas") %>%
+  pull(texto) %>%
+  strsplit("\n") %>%
+  unlist()
 
-# Fazer deploy no GitHub Pages
-usethis::use_pkgdown_github_pages()
+head(memorias_postumas, 9)
 
+# Usando a função obter_texto() do machador
+texto <- obter_texto("Dom Casmurro")
 
-# 1. Commitar as mudanças
+# Dividir em linhas e ver as primeiras
+linhas <- strsplit(texto, "\n")[[1]]
+head(linhas, 9)
+
+library(machador)
+library(tidytext)
+library(dplyr)
+library(ggplot2)
+
+preparar_tidytext("Dom Casmurro") %>%
+  anti_join(stop_words, by = c("palavra" = "word")) %>%
+  count(palavra, sort = TRUE) %>%
+  slice_max(n, n = 20) %>%
+  ggplot(aes(reorder(palavra, n), n, fill = n)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(title = "Palavras mais frequentes em Dom Casmurro",
+       x = NULL, y = "Frequência")
+
+library(usethis)
+
+# Configurar Git (se ainda não configurou)
 usethis::use_git()
-# Escolha "1: I agree"
+# Quando perguntar quais arquivos adicionar, digite: 1 (para todos)
 
-# 2. Fazer push (não use use_github, use git_push)
-usethis::git_push()
+# Conectar ao GitHub
+usethis::use_github()
