@@ -59,6 +59,37 @@ preparar_tidytext("Dom Casmurro") %>%
   labs(title = "Palavras mais frequentes em Dom Casmurro",
        x = NULL, y = "Frequência")
 
+library(machador)
+library(tidytext)
+library(dplyr)
+library(ggplot2)
+
+# 1. Tokenizar o texto usando a função do seu pacote
+dom_casmurro_tidy <- preparar_tidytext("Dom Casmurro")
+
+# 2. Remover as suas stopwords personalizadas
+# Como a coluna se chama "palavra" em ambos os dataframes, o anti_join funciona direto
+dom_casmurro_limpo <- dom_casmurro_tidy %>%
+  anti_join(stopwords_pt, by = "palavra") %>%
+  count(palavra, sort = TRUE) %>%
+  slice_max(n, n = 20)
+
+# 3. Visualizar o resultado
+print(dom_casmurro_limpo)
+
+# 4. Gerar o gráfico
+ggplot(dom_casmurro_limpo, aes(x = reorder(palavra, n), y = n, fill = n)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(
+    title = "20 palavras mais frequentes em Dom Casmurro",
+    subtitle = "Com remoção de stopwords personalizadas (stpw.txt)",
+    x = NULL, 
+    y = "Frequência"
+  ) +
+  theme_minimal()
+
+
 library(tibble)
 
 # Carregar suas stopwords
@@ -70,3 +101,4 @@ save(stopwords_pt, file = "data/stopwords_pt.rda")
 devtools::document()
 devtools::install()
 usethis::use_git()
+usethis::git_push()
