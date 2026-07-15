@@ -1,5 +1,10 @@
 # machador
 
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 Obras completas de Machado de Assis para análise de texto em R.
 
 ## Instalação
@@ -8,9 +13,11 @@ Obras completas de Machado de Assis para análise de texto em R.
 # Instalar do GitHub
 install.packages("remotes")
 remotes::install_github("seu-usuario/machador")
+```
 
 ### USO
 
+```r
 library(machador)
 library(tidytext)
 library(ggplot2)
@@ -33,7 +40,8 @@ preparar_tidytext("Dom Casmurro") %>%
   geom_col(show.legend = FALSE) +
   coord_flip() +
   labs(title = "Palavras mais frequentes em Dom Casmurro")
-  
+```
+
 ### Dados
 
 Fonte: Machado de Assis - MEC
