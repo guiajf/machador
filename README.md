@@ -1,5 +1,7 @@
 # machador
 
+<img src="man/figures/logo_machador.png" align="right" height="139" alt="" />
+
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
