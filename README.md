@@ -15,7 +15,7 @@ Obras completas de Machado de Assis para análise de texto em R.
 ```r
 # Instalar do GitHub
 install.packages("remotes")
-remotes::install_github("seu-usuario/machador")
+remotes::install_github("guiajf/machador")
 ```
 
 ### USO
