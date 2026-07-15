@@ -1,0 +1,48 @@
+url: https://guiajf.github.io/machador/
+
+template:
+  bootstrap: 5
+  bootswatch: cosmo
+  params:
+    ganalytics: UA-000000-01  # Opcional: se quiser adicionar Google Analytics no futuro
+
+home:
+  title: "machador"
+  description: "Obras completas de Machado de Assis para análise de texto em R."
+  strip_header: false
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [github]
+
+reference:
+  - title: "Funções Principais"
+    desc: "Funções para explorar e analisar as obras de Machado de Assis."
+    contents:
+      - listar_obras
+      - filtrar_por_genero
+      - obter_texto
+      - preparar_tidytext
+      - buscar_por_titulo
+      - limpar_textos_machado
+      - limpar_texto_individual
+
+  - title: "Datasets"
+    desc: "Conjuntos de dados incluídos no pacote."
+    contents:
+      - obras_metadata
+      - obras_textos
+      - stopwords_pt
+
+  - title: "Funções Auxiliares"
+    desc: "Funções internas e de suporte."
+    contents:
+      - starts_with("detectar")
+      - starts_with("remover")
+      - starts_with("identificar")
+
+news:
+  releases:
+    - text: "Versão 0.1.0"
+      href: https://github.com/guiajf/machador/releases/tag/v0.1.0
