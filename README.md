@@ -36,13 +36,18 @@ texto <- obter_texto("Dom Casmurro")
 
 # Análise com tidytext
 preparar_tidytext("Dom Casmurro") %>%
-  anti_join(stop_words) %>%
+  anti_join(stopwords_pt) %>%  # Agora funciona sem precisar do 'by'
   count(palavra, sort = TRUE) %>%
   slice_max(n, n = 20) %>%
   ggplot(aes(reorder(palavra, n), n, fill = n)) +
   geom_col(show.legend = FALSE) +
   coord_flip() +
-  labs(title = "Palavras mais frequentes em Dom Casmurro")
+  labs(
+    title = "20 palavras mais frequentes em Dom Casmurro",
+    subtitle = "Stopwords em português removidas",
+    x = NULL, 
+    y = "Frequência"
+  )
 ```
 
 ### Dados
