@@ -25,3 +25,14 @@
 #' }
 #' @source \url{https://machado.mec.gov.br/}
 "obras_textos"
+
+#' Stopwords em Português
+#'
+#' Lista de palavras vazias (stopwords) em português para filtragem
+#' em análises de texto.
+#'
+#' @format Um tibble com uma coluna:
+#' \describe{
+#'   \item{palavra}{A palavra vazia (character)}
+#' }
+"stopwords_pt"

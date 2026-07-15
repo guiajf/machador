@@ -59,11 +59,14 @@ preparar_tidytext("Dom Casmurro") %>%
   labs(title = "Palavras mais frequentes em Dom Casmurro",
        x = NULL, y = "Frequência")
 
-library(usethis)
+library(tibble)
 
-# Configurar Git (se ainda não configurou)
+# Carregar suas stopwords
+stopwords_pt <- tibble(palavra = readLines("stpw.txt", encoding = "UTF-8"))
+
+# Salvar na pasta data do pacote
+save(stopwords_pt, file = "data/stopwords_pt.rda")
+
+devtools::document()
+devtools::install()
 usethis::use_git()
-# Quando perguntar quais arquivos adicionar, digite: 1 (para todos)
-
-# Conectar ao GitHub
-usethis::use_github()
