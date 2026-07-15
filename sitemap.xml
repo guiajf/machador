@@ -3,6 +3,14 @@
 <url><loc>/LICENSE-text.html</loc></url>
 <url><loc>/authors.html</loc></url>
 <url><loc>/index.html</loc></url>
+<url><loc>/reference/buscar_por_titulo.html</loc></url>
+<url><loc>/reference/filtrar_por_genero.html</loc></url>
 <url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/listar_obras.html</loc></url>
+<url><loc>/reference/obras_metadata.html</loc></url>
+<url><loc>/reference/obras_textos.html</loc></url>
+<url><loc>/reference/obter_texto.html</loc></url>
+<url><loc>/reference/preparar_tidytext.html</loc></url>
+<url><loc>/reference/stopwords_pt.html</loc></url>
 </urlset>
 

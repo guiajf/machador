@@ -85,16 +85,16 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Listar todas as obras</span></span>
-<span><span class="fu">listar_obras</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/listar_obras.html">listar_obras</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Filtrar por gênero</span></span>
-<span><span class="fu">filtrar_por_genero</span><span class="op">(</span><span class="st">"romance"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/filtrar_por_genero.html">filtrar_por_genero</a></span><span class="op">(</span><span class="st">"romance"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Obter texto de uma obra</span></span>
-<span><span class="va">texto</span> <span class="op">&lt;-</span> <span class="fu">obter_texto</span><span class="op">(</span><span class="st">"Dom Casmurro"</span><span class="op">)</span></span>
+<span><span class="va">texto</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/obter_texto.html">obter_texto</a></span><span class="op">(</span><span class="st">"Dom Casmurro"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Análise com tidytext</span></span>
-<span><span class="fu">preparar_tidytext</span><span class="op">(</span><span class="st">"Dom Casmurro"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span><span class="fu"><a href="reference/preparar_tidytext.html">preparar_tidytext</a></span><span class="op">(</span><span class="st">"Dom Casmurro"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">anti_join</span><span class="op">(</span><span class="va">stop_words</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">count</span><span class="op">(</span><span class="va">palavra</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">slice_max</span><span class="op">(</span><span class="va">n</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
