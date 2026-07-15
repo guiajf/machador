@@ -3,7 +3,6 @@
 .RData
 .Ruserdata
 *.Rproj
-man/*.Rd
 .httr-oauth
 .DS_Store
 .quarto
