@@ -52,11 +52,11 @@ preparar_tidytext("Dom Casmurro") %>%
 
 ### Dados
 
-Fonte: Machado de Assis - MEC
+*Fonte*: Machado de Assis - MEC (https://machado.mec.gov.br/)
 
-Licença dos dados: Domínio público
+*Licença dos dados*: Domínio público
 
-Total de obras: 116 obras em 8 gêneros
+*Total de obras*: 116 obras em 8 gêneros
 
 ### Licença
 
