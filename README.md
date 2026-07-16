@@ -36,7 +36,7 @@ texto <- obter_texto("Dom Casmurro")
 
 # Análise com tidytext
 preparar_tidytext("Dom Casmurro") %>%
-  anti_join(stopwords_pt) %>%  # Agora funciona sem precisar do 'by'
+  anti_join(stopwords_pt) %>%
   count(palavra, sort = TRUE) %>%
   slice_max(n, n = 20) %>%
   ggplot(aes(reorder(palavra, n), n, fill = n)) +
