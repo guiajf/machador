@@ -53,7 +53,9 @@ preparar_tidytext("Dom Casmurro") %>%
 ### Dados
 
 Fonte: Machado de Assis - MEC
+
 Licença dos dados: Domínio público
+
 Total de obras: 116 obras em 8 gêneros
 
 ### Licença
