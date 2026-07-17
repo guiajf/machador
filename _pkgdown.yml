@@ -25,8 +25,7 @@ reference:
       - obter_texto
       - preparar_tidytext
       - buscar_por_titulo
-      - limpar_textos_machado
-      - limpar_texto_individual
+
 
   - title: "Datasets"
     desc: "Conjuntos de dados incluídos no pacote."

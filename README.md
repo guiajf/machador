@@ -36,7 +36,7 @@ texto <- obter_texto("Dom Casmurro")
 
 # Análise com tidytext
 preparar_tidytext("Dom Casmurro") %>%
-  anti_join(stopwords_pt) %>%  # Agora funciona sem precisar do 'by'
+  anti_join(stopwords_pt) %>%
   count(palavra, sort = TRUE) %>%
   slice_max(n, n = 20) %>%
   ggplot(aes(reorder(palavra, n), n, fill = n)) +
@@ -52,9 +52,11 @@ preparar_tidytext("Dom Casmurro") %>%
 
 ### Dados
 
-Fonte: Machado de Assis - MEC
-Licença dos dados: Domínio público
-Total de obras: 116 obras em 8 gêneros
+*Fonte*: Machado de Assis - MEC (https://machado.mec.gov.br/)
+
+*Licença dos dados*: Domínio público
+
+*Total de obras*: 116 obras em 8 gêneros
 
 ### Licença
 
